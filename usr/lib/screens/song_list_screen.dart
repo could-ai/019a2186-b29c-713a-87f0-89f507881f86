@@ -111,12 +111,11 @@ class SongListScreen extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                    MaterialPageRoute(
-                      builder: (context) => PlayerScreen(song: song),
-                    ),
-                  );
-                },
-              ),
+                  MaterialPageRoute(
+                    builder: (context) => PlayerScreen(song: song),
+                  ),
+                );
+              },
             ),
           );
         },
