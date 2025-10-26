@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:just_audio/just_audio.dart';
 import 'package:audio_session/audio_session.dart';
 import '../models/song.dart';
@@ -57,6 +58,11 @@ class _PlayerScreenState extends State<PlayerScreen> {
       await _audioPlayer.setAsset(widget.song.audioUrl);
     } catch (e) {
       // Handle error - could show a snackbar
+      if (mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(content: Text(AppLocalizations.of(context)!.errorLoadingAudio)),
+        );
+      }
       print('Error loading audio: $e');
     }
   }
@@ -88,10 +94,12 @@ class _PlayerScreenState extends State<PlayerScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
+
     return Scaffold(
       backgroundColor: const Color(0xFFE8F4FD), // Light blue background
       appBar: AppBar(
-        title: const Text('Now Playing'),
+        title: Text(l10n.nowPlaying),
         backgroundColor: const Color(0xFF8B4513), // Saddle brown
         elevation: 0,
       ),

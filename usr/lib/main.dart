@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'screens/song_list_screen.dart';
 
 void main() async {
@@ -12,8 +14,19 @@ class RajasthaniSongApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Rajasthani Songs',
+      title: 'राजस्थानी गाने',
       debugShowCheckedModeBanner: false,
+      localizationsDelegates: const [
+        AppLocalizations.delegate,
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+        GlobalCupertinoLocalizations.delegate,
+      ],
+      supportedLocales: const [
+        Locale('en'), // English
+        Locale('hi'), // Hindi
+      ],
+      locale: const Locale('hi'), // Default to Hindi
       theme: ThemeData(
         // Rajasthan-inspired color scheme
         colorScheme: const ColorScheme(
@@ -66,8 +79,8 @@ class RajasthaniSongApp extends StatelessWidget {
           shadowColor: Colors.black.withOpacity(0.1),
           elevation: 4,
           shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(16),
-          ),
+              borderRadius: BorderRadius.circular(16),
+            ),
         ),
         // App bar theme
         appBarTheme: const AppBarTheme(

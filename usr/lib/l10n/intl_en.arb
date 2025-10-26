@@ -1,0 +1,22 @@
+{
+  "@@locale": "en",
+  "appTitle": "Rajasthani Songs",
+  "nowPlaying": "Now Playing",
+  "skipPrevious": "Skip Previous",
+  "play": "Play",
+  "pause": "Pause",
+  "skipNext": "Skip Next",
+  "artist": "Artist",
+  "album": "Album",
+  "duration": "Duration",
+  "noSongSelected": "No song selected",
+  "errorLoadingAudio": "Error loading audio",
+  "songListTitle": "Rajasthani Songs",
+  "searchSongs": "Search Songs",
+  "favorites": "Favorites",
+  "playlists": "Playlists",
+  "settings": "Settings",
+  "about": "About",
+  "loading": "Loading...",
+  "retry": "Retry"
+}

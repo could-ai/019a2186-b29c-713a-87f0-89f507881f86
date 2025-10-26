@@ -1,0 +1,22 @@
+{
+  "@@locale": "hi",
+  "appTitle": "राजस्थानी गाने",
+  "nowPlaying": "अब बज रहा है",
+  "skipPrevious": "पिछला गाना",
+  "play": "बजाएं",
+  "pause": "रोकें",
+  "skipNext": "अगला गाना",
+  "artist": "गायक",
+  "album": "एल्बम",
+  "duration": "अवधि",
+  "noSongSelected": "कोई गाना नहीं चुना गया",
+  "errorLoadingAudio": "ऑडियो लोड करने में त्रुटि",
+  "songListTitle": "राजस्थानी गाने",
+  "searchSongs": "गाने खोजें",
+  "favorites": "पसंदीदा",
+  "playlists": "प्लेलिस्ट",
+  "settings": "सेटिंग्स",
+  "about": "हमारे बारे में",
+  "loading": "लोड हो रहा है...",
+  "retry": "पुनः प्रयास करें"
+}

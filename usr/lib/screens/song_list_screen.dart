@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import '../data/songs_data.dart';
 import '../models/song.dart';
 import 'player_screen.dart';
@@ -9,13 +10,14 @@ class SongListScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final songs = getAllSongs();
+    final l10n = AppLocalizations.of(context)!;
 
     return Scaffold(
       backgroundColor: const Color(0xFFE8F4FD), // Light blue background
       appBar: AppBar(
-        title: const Text(
-          'रajasthani Songs',
-          style: TextStyle(
+        title: Text(
+          l10n.songListTitle,
+          style: const TextStyle(
             fontSize: 24,
             fontWeight: FontWeight.bold,
           ),
@@ -77,7 +79,7 @@ class SongListScreen extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    song.artist,
+                    '${l10n.artist}: ${song.artist}',
                     style: const TextStyle(
                       fontSize: 14,
                       color: Color(0xFF696969),
@@ -85,7 +87,7 @@ class SongListScreen extends StatelessWidget {
                   ),
                   const SizedBox(height: 4),
                   Text(
-                    song.album,
+                    '${l10n.album}: ${song.album}',
                     style: const TextStyle(
                       fontSize: 12,
                       color: Color(0xFFDC143C),
@@ -109,11 +111,12 @@ class SongListScreen extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
-                    builder: (context) => PlayerScreen(song: song),
-                  ),
-                );
-              },
+                    MaterialPageRoute(
+                      builder: (context) => PlayerScreen(song: song),
+                    ),
+                  );
+                },
+              ),
             ),
           );
         },

@@ -1,5 +1,5 @@
 name: couldai_user_app
-description: "A Rajasthani song app with audio playback."
+description: "एक राजस्थानी गाना ऐप जिसमें ऑडियो प्लेबैक है।"
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
@@ -41,6 +41,9 @@ dependencies:
   # Audio session management for better playback control
   audio_session: ^0.1.14
 
+  # Internationalization support for Hindi localization
+  intl: ^0.19.0
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -52,6 +55,10 @@ dev_dependencies:
   # rules and activating additional ones.
   flutter_lints: ^5.0.0
 
+  # Flutter gen-l10n for generating localization files
+  flutter_localizations:
+    sdk: flutter
+
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
 
@@ -62,6 +69,9 @@ flutter:
   # included with your application, so that you can use the icons in
   # the material Icons class.
   uses-material-design: true
+
+  # Generate localization files
+  generate: true
 
   # Assets for Rajasthani song audio files and images
   assets:
